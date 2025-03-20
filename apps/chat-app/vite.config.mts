@@ -19,7 +19,9 @@ export default defineConfig({
     {
       name: 'treat-js-files-as-jsx',
       async transform(code, id) {
-        if (!id.match(/node_modules\/.*\.js$/)) return null;
+        if (!id.match(/node_modules\/.*\.(js|mjs|web\.mjs)$/)) {
+          return null;
+        }
 
         return transformWithEsbuild(code, id, {
           loader: 'jsx',
@@ -37,6 +39,7 @@ export default defineConfig({
       loader: {
         '.js': 'jsx',
         '.mjs': 'jsx',
+        '.web.mjs': 'jsx',
       },
     },
   },
