@@ -41,6 +41,7 @@
     "autoprefixer": "^10.4.20",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "lucide-react": "^0.483.0",
     "lucide-react-native": "^0.454.0",
     "nativewind": "^4.1.23",
     "postcss": "^8.4.47",
