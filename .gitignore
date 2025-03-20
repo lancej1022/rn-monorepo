@@ -5,6 +5,7 @@ packages/*/build
 
 # Turborepo
 .turbo
+dist
 
 # Expo
 .expo

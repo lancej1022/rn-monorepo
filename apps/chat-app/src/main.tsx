@@ -1,17 +1,16 @@
 import './global.css';
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-// import './index.css'
 
 import { routeTree } from './routeTree.gen';
 // import { ThemeProvider } from './ThemeProvider';
 import { createRouter, RouterProvider } from '@tanstack/react-router';
 
-// Create a new router instance
 const router = createRouter({
   routeTree,
   context: {},
   defaultPreload: 'intent',
+  defaultPreloadDelay: 20,
   scrollRestoration: true,
   defaultStructuralSharing: true,
   defaultPreloadStaleTime: 0,
@@ -26,10 +25,8 @@ declare module '@tanstack/react-router' {
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    {/* <ThemeProvider>
-      <App />
-    </ThemeProvider> */}
+    {/* <ThemeProvider> */}
     <RouterProvider router={router} />
-    {/* <App /> */}
+    {/* </ThemeProvider>  */}
   </StrictMode>
 );

@@ -4,7 +4,7 @@ import type { LucideIcon } from 'lucide-react-native';
 import * as React from 'react';
 import { View, type ViewProps } from 'react-native';
 import { cn } from '~/lib/utils';
-import { Text } from '~/components/ui/ui/text';
+import { Text } from '~/components/ui/text';
 
 const alertVariants = cva(
   'relative bg-background w-full rounded-lg border border-border p-4 shadow shadow-foreground/10',

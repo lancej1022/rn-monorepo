@@ -1,4 +1,4 @@
-import { createFileRoute } from '@tanstack/react-router';
+import { createFileRoute, Link } from '@tanstack/react-router';
 import { Button } from '~/components/ui/button';
 
 export const Route = createFileRoute('/')({
@@ -17,6 +17,9 @@ function App() {
           Edit <code>src/routes/index.tsx</code> and save to reload.
         </p>
         <Button>Text</Button>
+        <Link to='/signup'>
+          <Button>Sign Up</Button>
+        </Link>
         <a
           className='text-[#61dafb] hover:underline'
           href='https://reactjs.org'

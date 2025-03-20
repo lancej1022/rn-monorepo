@@ -14,7 +14,7 @@ import { ChevronDown } from '~/lib/icons/ChevronDown';
 import { ChevronRight } from '~/lib/icons/ChevronRight';
 import { ChevronUp } from '~/lib/icons/ChevronUp';
 import { cn } from '~/lib/utils';
-import { TextClassContext } from '~/components/ui/ui/text';
+import { TextClassContext } from '~/components/ui/text';
 
 const DropdownMenu = DropdownMenuPrimitive.Root;
 
@@ -101,8 +101,8 @@ const DropdownMenuContent = React.forwardRef<
                 overlayStyle,
               ])
             : Platform.OS !== 'web'
-            ? StyleSheet.absoluteFill
-            : undefined
+              ? StyleSheet.absoluteFill
+              : undefined
         }
         className={overlayClassName}
       >
