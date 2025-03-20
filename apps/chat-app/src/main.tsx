@@ -2,10 +2,9 @@ import './global.css';
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 // import './index.css'
-import App from './App';
-// Import the generated route tree
+
 import { routeTree } from './routeTree.gen';
-import { ThemeProvider } from './ThemeProvider';
+// import { ThemeProvider } from './ThemeProvider';
 import { createRouter, RouterProvider } from '@tanstack/react-router';
 
 // Create a new router instance
