@@ -23,9 +23,9 @@ export default defineConfig({
         });
       },
     },
+    TanStackRouterVite({ target: 'react', autoCodeSplitting: true }),
     react(),
     reactNativeWeb(),
-    TanStackRouterVite({ target: 'react', autoCodeSplitting: true }),
   ],
   optimizeDeps: {
     force: true,
