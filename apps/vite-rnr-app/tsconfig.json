@@ -14,6 +14,7 @@
       "~/*": ["src/*"]
     },
     "types": ["nativewind/types"],
+    "outDir": "dist",
 
     "allowSyntheticDefaultImports": true
   },
