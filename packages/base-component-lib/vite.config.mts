@@ -3,14 +3,23 @@ import react from '@vitejs/plugin-react';
 import reactNativeWeb from 'vite-plugin-react-native-web';
 import path from 'path';
 import dtsPlugin from 'vite-plugin-dts';
+import noBundlePlugin from 'vite-plugin-no-bundle';
 
-// https://vite.dev/config/
+import { readdirSync } from 'fs';
+import { join } from 'path';
+
+const uiDir = join(__dirname, 'src/components/ui');
+const uiFiles = readdirSync(uiDir, { recursive: true })
+  .filter((file) => file.toString().endsWith('.tsx'))
+  .map((file) => join('./src/components/ui', file.toString()));
+
 export default defineConfig({
   build: {
     lib: {
-      entry: ['./src/ui/**/*.tsx'],
+      entry: uiFiles,
       formats: ['es', 'cjs'],
     },
+    minify: false,
     sourcemap: true,
     outDir: 'dist',
     rollupOptions: {
@@ -42,16 +51,16 @@ export default defineConfig({
     },
     react(), // TODO: do I actually want this, or will it cause the compiled output to be borked?
     reactNativeWeb(),
-    dtsPlugin({
-      compilerOptions: {
-        tsBuildInfoFile: 'tsconfig.build.tsbuildinfo',
-        outDir: 'dist',
-        rootDir: 'src',
-        noEmit: false,
-      },
-      include: ['src/**/*.ts', 'src/**/*.tsx'],
-    }),
-    // noBundlePlugin({ copy: '**/*.css' }),
+    // dtsPlugin({
+    //   compilerOptions: {
+    //     tsBuildInfoFile: 'tsconfig.build.tsbuildinfo',
+    //     outDir: 'dist',
+    //     rootDir: 'src',
+    //     noEmit: false,
+    //   },
+    //   include: ['src/**/*.ts', 'src/**/*.tsx'],
+    // }),
+    noBundlePlugin(),
   ],
   optimizeDeps: {
     force: true,
