@@ -28,7 +28,7 @@ export function LoginForm({ className, ...props }: React.ComponentPropsWithoutRe
               Forgot your password?
             </a>
           </div>
-          <Input id='password' textContentType='password' />
+          <Input id='password' secureTextEntry={true} />
         </div>
         <Button
           // TODO: there is no `submit` type with a Pressable, so I need to handle this manually using `onPress` to submit the form
