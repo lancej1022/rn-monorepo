@@ -1,4 +1,6 @@
 import { ChevronUp } from 'lucide-react-native';
-import { iconWithClassName } from './iconWithClassName';
+import { iconWithClassName, LucidePropsWithClassName } from './iconWithClassName';
+import { FunctionComponent } from 'react';
 iconWithClassName(ChevronUp);
-export { ChevronUp };
+const ChevronUpAlias: FunctionComponent<LucidePropsWithClassName> = ChevronUp;
+export { ChevronUpAlias as ChevronUp };

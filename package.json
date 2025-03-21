@@ -28,6 +28,12 @@
         "expo-modules-*",
         "typescript"
       ]
+    },
+    "overrides": {
+      "react-native-css-interop": "0.1.22"
+    },
+    "patchedDependencies": {
+      "react-native-css-interop": "patches/react-native-css-interop.patch"
     }
   },
   "prettier": {

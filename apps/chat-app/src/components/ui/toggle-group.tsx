@@ -5,6 +5,7 @@ import { toggleTextVariants, toggleVariants } from '~/components/ui/toggle';
 import { TextClassContext } from '~/components/ui/text';
 import * as ToggleGroupPrimitive from '@rn-primitives/toggle-group';
 import { cn } from '~/lib/utils';
+import { LucidePropsWithClassName } from '~/lib/icons/iconWithClassName';
 
 const ToggleGroupContext = React.createContext<VariantProps<typeof toggleVariants> | null>(null);
 
@@ -75,7 +76,8 @@ function ToggleGroupIcon({
   icon: Icon,
   ...props
 }: React.ComponentPropsWithoutRef<LucideIcon> & {
-  icon: LucideIcon;
+  icon: React.FunctionComponent<LucidePropsWithClassName>; // TODO: this is technically supposed to be `LucideIcon`
+  className?: string;
 }) {
   const textClass = React.useContext(TextClassContext);
   return <Icon className={cn(textClass, className)} {...props} />;
