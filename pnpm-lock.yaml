@@ -51,6 +51,9 @@ catalogs:
     tailwindcss-animate:
       specifier: 1.0.7
       version: 1.0.7
+    typescript:
+      specifier: 5.6.2
+      version: 5.6.2
 
 importers:
 
@@ -60,8 +63,8 @@ importers:
         specifier: ^1.12.4
         version: 1.13.4
       typescript:
-        specifier: ^5.3.3
-        version: 5.7.2
+        specifier: 'catalog:'
+        version: 5.6.2
 
   apps/chat-app:
     dependencies:
@@ -6479,6 +6482,11 @@ packages:
     peerDependencies:
       eslint: ^8.57.0 || ^9.0.0
       typescript: '>=4.8.4 <5.9.0'
+
+  typescript@5.6.2:
+    resolution: {integrity: sha512-NW8ByodCSNCwZeghjN3o+JX5OFH0Ojg6sadjEKY4huZ52TqbJTJnDo5+Tw98lSy63NZvi4n+ez5m2u5d4PkZyw==}
+    engines: {node: '>=14.17'}
+    hasBin: true
 
   typescript@5.6.3:
     resolution: {integrity: sha512-hjcS1mhfuyi4WW8IWtjP7brDrG2cuDZukyrYrSauoXGNgx0S7zceP07adYkJycEr56BOUTNPzbInooiN3fn1qw==}
@@ -16160,6 +16168,8 @@ snapshots:
       typescript: 5.6.3
     transitivePeerDependencies:
       - supports-color
+
+  typescript@5.6.2: {}
 
   typescript@5.6.3: {}
 

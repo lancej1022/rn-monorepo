@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from '@tanstack/react-router';
+import { ThemeToggle } from '~/components/ThemeToggle';
 import { Button } from '~/components/ui/button';
 
 export const Route = createFileRoute('/')({
@@ -8,6 +9,9 @@ export const Route = createFileRoute('/')({
 function App() {
   return (
     <div className='text-center'>
+      <nav className='max-h-16 max-w-5'>
+        <ThemeToggle />
+      </nav>
       <header className='min-h-screen flex flex-col items-center justify-center bg-[#282c34] text-white text-[calc(10px+2vmin)]'>
         <img
           className='h-[40vmin] pointer-events-none animate-[spin_20s_linear_infinite]'
