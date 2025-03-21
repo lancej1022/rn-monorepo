@@ -1,4 +1,6 @@
 import { MoonStar } from 'lucide-react-native';
-import { iconWithClassName } from './iconWithClassName';
+import { iconWithClassName, LucidePropsWithClassName } from './iconWithClassName';
+import { FunctionComponent } from 'react';
 iconWithClassName(MoonStar);
-export { MoonStar };
+const MoonStarAlias: FunctionComponent<LucidePropsWithClassName> = MoonStar;
+export { MoonStarAlias as MoonStar };

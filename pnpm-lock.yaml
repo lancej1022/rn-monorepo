@@ -163,6 +163,9 @@ importers:
       autoprefixer:
         specifier: 'catalog:'
         version: 10.4.20(postcss@8.4.47)
+      base-component-lib:
+        specifier: 'workspace:'
+        version: link:../../packages/base-component-lib
       class-variance-authority:
         specifier: 'catalog:'
         version: 0.7.0

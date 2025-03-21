@@ -8,15 +8,17 @@ import noBundlePlugin from 'vite-plugin-no-bundle';
 import { readdirSync } from 'fs';
 import { join } from 'path';
 
-const uiDir = join(__dirname, 'src/components/ui');
-const uiFiles = readdirSync(uiDir, { recursive: true })
-  .filter((file) => file.toString().endsWith('.tsx'))
-  .map((file) => join('./src/components/ui', file.toString()));
+// TODO: would also need to map over the `lib` directory and add all the files in there too
+// const uiDir = join(__dirname, 'src/components/ui');
+// const uiFiles = readdirSync(uiDir, { recursive: true })
+//   .filter((file) => file.toString().endsWith('.tsx'))
+//   .map((file) => join('./src/components/ui', file.toString()));
 
 export default defineConfig({
   build: {
     lib: {
-      entry: uiFiles,
+      // entry: uiFiles,
+      entry: 'src/index.ts',
       formats: ['es', 'cjs'],
     },
     minify: false,
@@ -51,15 +53,15 @@ export default defineConfig({
     },
     react(), // TODO: do I actually want this, or will it cause the compiled output to be borked?
     reactNativeWeb(),
-    // dtsPlugin({
-    //   compilerOptions: {
-    //     tsBuildInfoFile: 'tsconfig.build.tsbuildinfo',
-    //     outDir: 'dist',
-    //     rootDir: 'src',
-    //     noEmit: false,
-    //   },
-    //   include: ['src/**/*.ts', 'src/**/*.tsx'],
-    // }),
+    dtsPlugin({
+      compilerOptions: {
+        tsBuildInfoFile: 'tsconfig.build.tsbuildinfo',
+        outDir: 'dist',
+        rootDir: 'src',
+        noEmit: false,
+      },
+      include: ['src/**/*.ts', 'src/**/*.tsx'],
+    }),
     noBundlePlugin(),
   ],
   optimizeDeps: {
