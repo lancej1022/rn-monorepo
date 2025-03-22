@@ -15,9 +15,11 @@
     "build": "turbo build",
     "build:showcase": "turbo build --filter=showcase",
     "build:docs": "turbo build --filter=docs",
-    "clean": "turbo clean && rm -rf .turbo node_modules"
+    "clean": "turbo clean && rm -rf .turbo node_modules",
+    "prepare": "husky"
   },
   "devDependencies": {
+    "husky": "^9.1.7",
     "turbo": "^1.12.4",
     "typescript": "catalog:"
   },

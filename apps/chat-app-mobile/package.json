@@ -9,7 +9,8 @@
     "dev": "one dev",
     "dev:clean": "one dev --clean",
     "prebuild:native": "one prebuild",
-    "serve": "one serve"
+    "serve": "one serve",
+    "typecheck": "tsc"
   },
   "dependencies": {
     "expo": "~52.0.17",
