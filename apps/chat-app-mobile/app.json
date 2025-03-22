@@ -4,13 +4,8 @@
     "slug": "chat-app-mobile",
     "sdkVersion": "52.0.0",
     "newArchEnabled": true,
-    "platforms": [
-      "ios",
-      "android"
-    ],
-    "plugins": [
-      "vxrn/expo-plugin"
-    ],
+    "platforms": ["ios", "android"],
+    "plugins": ["vxrn/expo-plugin"],
     "icon": "./public/app-icon.png",
     "splash": {
       "image": "./public/splash.png",

@@ -1,5 +1,6 @@
-import { Text, View } from 'react-native'
-import './base.css'
+import { View } from 'react-native';
+import './base.css';
+import { Button, Text } from 'base-component-lib';
 
 export default function Index() {
   return (
@@ -11,10 +12,13 @@ export default function Index() {
         alignItems: 'center',
         minHeight: '100%',
         padding: 50,
-        backgroundColor: 'yellow',
       }}
     >
-      <Text className="bg-red-500 p-4">Hello world, from One</Text>
+      <View style={{ maxHeight: '20%' }}>
+        <Button variant='outline'>
+          <Text>Some button</Text>
+        </Button>
+      </View>
     </View>
-  )
+  );
 }
