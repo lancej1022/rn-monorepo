@@ -41,6 +41,7 @@
     "@tanstack/react-table": "catalog:",
     "autoprefixer": "catalog:",
     "base-component-lib": "workspace:",
+    "features": "workspace:",
     "class-variance-authority": "catalog:",
     "clsx": "catalog:",
     "expo-navigation-bar": "^4.0.8",
