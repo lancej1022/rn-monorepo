@@ -1,5 +1,5 @@
 import { cn } from '~/lib/utils';
-import { Button, Input, Label } from 'base-component-lib';
+import { Button, Input, Label, Text } from 'base-component-lib';
 
 export function LoginForm({ className, ...props }: React.ComponentPropsWithoutRef<'form'>) {
   return (
@@ -35,7 +35,7 @@ export function LoginForm({ className, ...props }: React.ComponentPropsWithoutRe
           // type='submit'
           className='w-full'
         >
-          Login
+          <Text>Login</Text>
         </Button>
         <div className='relative text-center text-sm after:absolute after:inset-0 after:top-1/2 after:z-0 after:flex after:items-center after:border-t after:border-border'>
           <span className='relative z-10 bg-background px-2 text-muted-foreground'>
@@ -49,7 +49,7 @@ export function LoginForm({ className, ...props }: React.ComponentPropsWithoutRe
               fill='currentColor'
             />
           </svg>
-          Login with GitHub
+          <Text>Login with GitHub</Text>
         </Button>
       </div>
       <div className='text-center text-sm'>

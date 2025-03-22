@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from '@tanstack/react-router';
 import { ThemeToggle } from '~/components/ThemeToggle';
-import { Button } from '~/components/ui/button';
+import { Button, Text } from 'base-component-lib';
 
 export const Route = createFileRoute('/')({
   component: App,
@@ -20,9 +20,10 @@ function App() {
         <p>
           Edit <code>src/routes/index.tsx</code> and save to reload.
         </p>
-        <Button>Text</Button>
         <Link to='/signup'>
-          <Button>Sign Up</Button>
+          <Button>
+            <Text>Sign up</Text>
+          </Button>
         </Link>
         <a
           className='text-[#61dafb] hover:underline'
