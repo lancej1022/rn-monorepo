@@ -1,5 +1,5 @@
 {
-  "name": "features",
+  "name": "@chat-app/features",
   "version": "0.1.0",
   "private": true,
   "description": "Library holding cross-platform feature UI",
@@ -59,7 +59,7 @@
     "@rn-primitives/types": "catalog:",
     "@tanstack/react-table": "catalog:",
     "autoprefixer": "catalog:",
-    "base-component-lib": "workspace:",
+    "@chat-app/base-component-lib": "workspace:",
     "class-variance-authority": "catalog:",
     "clsx": "catalog:",
     "expo-navigation-bar": "^4.0.8",

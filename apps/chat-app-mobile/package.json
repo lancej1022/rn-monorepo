@@ -51,7 +51,7 @@
     "react-dom": "catalog:",
     "tailwind-merge": "catalog:",
     "tailwindcss": "catalog:",
-    "base-component-lib": "workspace:",
+    "@chat-app/base-component-lib": "workspace:",
     "expo": "~52.0.17",
     "nativewind": "catalog:",
     "one": "1.1.471",

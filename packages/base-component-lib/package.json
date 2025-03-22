@@ -1,5 +1,5 @@
 {
-  "name": "base-component-lib",
+  "name": "@chat-app/base-component-lib",
   "version": "0.1.0",
   "private": true,
   "description": "Base component library that wraps react-native-reusables",
