@@ -61,6 +61,7 @@
     "autoprefixer": "catalog:",
     "class-variance-authority": "catalog:",
     "clsx": "catalog:",
+    "expo-navigation-bar": "^4.0.8",
     "lucide-react": "catalog:",
     "lucide-react-native": "catalog:",
     "nativewind": "catalog:",
