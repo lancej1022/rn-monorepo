@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Pressable, ScrollView, Linking } from 'react-native';
-import { Button, Input, Label, Text, cn } from 'base-component-lib';
+import { Button, Input, Label, Text, cn } from '@chat-app/base-component-lib';
 
 // TODO: Replace with `tanstack-form`
 export function LoginForm({ style, ...props }: React.ComponentPropsWithoutRef<typeof View>) {
