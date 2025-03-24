@@ -1,38 +1,10 @@
 diff --git a/dist/doctor.js b/dist/doctor.js
-index 98379be8dd4bc3cf639c743629b100ec463c6859..82f0e0919c7b27f3eb772670e85d37bd380aafd9 100644
+index 98379be8dd4bc3cf639c743629b100ec463c6859..1b47caf6e4da01628317e40839e6d084b5429726 100644
 --- a/dist/doctor.js
 +++ b/dist/doctor.js
-@@ -1,22 +1,21 @@
--"use strict";
--Object.defineProperty(exports, "__esModule", { value: true });
-+'use strict';
+@@ -1,4 +1,5 @@
+ "use strict";
 +let exports = {};
-+Object.defineProperty(exports, '__esModule', { value: true });
+ Object.defineProperty(exports, "__esModule", { value: true });
  exports.verifyJSX = verifyJSX;
  exports.verifyFlag = verifyFlag;
- exports.verifyData = verifyData;
- const computedStyles = globalThis.window
--    ? globalThis.window.getComputedStyle(globalThis.window.document.documentElement)
--    : { getPropertyValue: () => "asdf" };
-+  ? globalThis.window.getComputedStyle(globalThis.window.document.documentElement)
-+  : { getPropertyValue: () => 'asdf' };
- function verifyJSX() {
--    return <react-native-css-interop-jsx-pragma-check /> === true;
-+  return <react-native-css-interop-jsx-pragma-check /> === true;
- }
--function verifyFlag(name, value = "true") {
--    return globalThis.window
--        ? computedStyles.getPropertyValue(name ? `--css-interop-${name}` : "--css-interop") === value
--        : true;
-+function verifyFlag(name, value = 'true') {
-+  return globalThis.window
-+    ? computedStyles.getPropertyValue(name ? `--css-interop-${name}` : '--css-interop') === value
-+    : true;
- }
- function verifyData() {
--    return globalThis.window
--        ? computedStyles.getPropertyValue("--css-interop") !== ""
--        : true;
-+  return globalThis.window ? computedStyles.getPropertyValue('--css-interop') !== '' : true;
- }
- //# sourceMappingURL=doctor.js.map
