@@ -12,6 +12,12 @@ import { defineConfig, devices } from '@playwright/test';
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
+  expect: {
+    toMatchSnapshot: {
+      threshold: 0.2,
+      maxDiffPixelRatio: 0.02,
+    },
+  },
   testDir: './playwright',
   /* Run tests in files in parallel */
   fullyParallel: true,
