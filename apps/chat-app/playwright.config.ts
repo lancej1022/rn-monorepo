@@ -13,6 +13,10 @@ import { defineConfig, devices } from '@playwright/test';
  */
 export default defineConfig({
   expect: {
+    toHaveScreenshot: {
+      threshold: 0.2,
+      maxDiffPixelRatio: 0.02,
+    },
     toMatchSnapshot: {
       threshold: 0.2,
       maxDiffPixelRatio: 0.02,

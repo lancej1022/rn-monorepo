@@ -1,4 +1,5 @@
 import { cn, Button, Input, Label, Text } from '@chat-app/base-component-lib';
+import { View } from 'react-native';
 
 export function LoginForm({ className, ...props }: React.ComponentPropsWithoutRef<'form'>) {
   return (
@@ -41,12 +42,12 @@ export function LoginForm({ className, ...props }: React.ComponentPropsWithoutRe
           <Text>Login with GitHub</Text>
         </Button>
       </div>
-      <div className='text-center text-sm'>
-        Don&apos;t have an account?{' '}
+      <View data-testid='login-form-footer' className='block text-center text-sm'>
+        <Text>Don&apos;t have an account? </Text>
         <a href='#' className='underline underline-offset-4'>
           Sign up
         </a>
-      </div>
+      </View>
     </form>
   );
 }
