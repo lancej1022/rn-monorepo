@@ -27,11 +27,13 @@ export function LoginForm({ className, ...props }: React.ComponentPropsWithoutRe
         <Button type='submit' className='w-full'>
           <Text>Login</Text>
         </Button>
-        <div className='relative text-center text-sm after:absolute after:inset-0 after:top-1/2 after:z-0 after:flex after:items-center after:border-t after:border-border'>
-          <span className='relative z-10 bg-background px-2 text-muted-foreground'>
+        <View className='flex flex-row items-center justify-around gap-2 z-10 bg-background'>
+          <View className='h-[1px] flex-1 bg-border' />
+          <Text className='text-center text-sm relative z-10 bg-background px-2 text-muted-foreground'>
             Or continue with
-          </span>
-        </div>
+          </Text>
+          <View className='h-[1px] flex-1 bg-border' />
+        </View>
         <Button variant='outline' className='w-full'>
           <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'>
             <path
@@ -44,9 +46,10 @@ export function LoginForm({ className, ...props }: React.ComponentPropsWithoutRe
       </div>
       <View data-testid='login-form-footer' className='block text-center text-sm'>
         <Text>Don&apos;t have an account? </Text>
-        <a href='#' className='underline underline-offset-4'>
+        {/* @ts-ignore -- I'm pretty sure the `href` thing actually works in the UI, but idk why TS is mad? missing react-native-web @types maybe? */}
+        <Text href='#' className='underline underline-offset-4'>
           Sign up
-        </a>
+        </Text>
       </View>
     </form>
   );
