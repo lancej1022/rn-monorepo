@@ -1,4 +1,4 @@
-import { cn, Button, Input, Label, Text } from '@chat-app/base-component-lib';
+import { cn, Button, Input, Label, Text, P } from '@chat-app/base-component-lib';
 import { View } from 'react-native';
 
 function HorizontalBar() {
@@ -7,27 +7,36 @@ function HorizontalBar() {
 
 export function LoginForm({ className, ...props }: React.ComponentPropsWithoutRef<'form'>) {
   return (
-    <form className={cn('flex flex-col gap-6', className)} {...props}>
-      <div className='flex flex-col items-center gap-2 text-center'>
-        <h1 className='text-2xl font-bold'>Login to your account</h1>
-        <p className='text-balance text-sm text-muted-foreground'>
+    <View
+      // @ts-expect-error -- TODO: idk why this is throwing an error, but it works fine on web
+      role='form'
+      className={cn('flex flex-col gap-6', className)}
+      {...props}
+    >
+      <View className='flex flex-col items-center gap-2 text-center'>
+        <Text role='heading' aria-level='1' className='text-2xl font-bold'>
+          Login to your account
+        </Text>
+        <P className='text-balance text-sm text-muted-foreground'>
           Enter your email below to login to your account
-        </p>
-      </div>
-      <div className='grid gap-6'>
-        <div className='grid gap-2'>
+        </P>
+      </View>
+      <View className='grid gap-6'>
+        <View className='grid gap-2'>
           <Label htmlFor='email'>Email</Label>
           <Input id='email' placeholder='m@example.com' />
-        </div>
-        <div className='grid gap-2'>
-          <div className='flex items-center'>
+        </View>
+        <View className='grid gap-2'>
+          <View className='flex flex-row items-center'>
             <Label htmlFor='password'>Password</Label>
-            <a href='#' className='ml-auto text-sm underline-offset-4 hover:underline'>
+            {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+            {/* @ts-ignore -- the `href` definitely works as expected when used in react-native-web, so im not sure why it errors here? */}
+            <Text href='#yeet' className='ml-auto text-sm underline-offset-4 hover:underline'>
               Forgot your password?
-            </a>
-          </div>
+            </Text>
+          </View>
           <Input id='password' secureTextEntry={true} />
-        </div>
+        </View>
         <Button type='submit' className='w-full'>
           <Text>Login</Text>
         </Button>
@@ -48,7 +57,7 @@ export function LoginForm({ className, ...props }: React.ComponentPropsWithoutRe
           </svg>
           <Text>Login with GitHub</Text>
         </Button>
-      </div>
+      </View>
       <View data-testid='login-form-footer' className='block text-center text-sm'>
         <Text>Don&apos;t have an account? </Text>
         {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
@@ -57,6 +66,6 @@ export function LoginForm({ className, ...props }: React.ComponentPropsWithoutRe
           Sign up
         </Text>
       </View>
-    </form>
+    </View>
   );
 }

@@ -1,3 +1,4 @@
+// react-native-reusables
 export * from './components/ui/accordion';
 export * from './components/ui/alert';
 export * from './components/ui/alert-dialog';
@@ -27,7 +28,9 @@ export * from './components/ui/text';
 export * from './components/ui/textarea';
 export * from './components/ui/toggle';
 export * from './components/ui/tooltip';
+export * from './components/ui/typography';
 
 export * from './lib/utils';
 export * from './lib/constants';
 export * from './lib/useColorScheme';
+export * from './lib/icons';
