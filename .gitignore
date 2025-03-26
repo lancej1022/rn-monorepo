@@ -63,3 +63,11 @@ xcuserdata
 
 # VSCode
 .history/
+
+#playwright
+
+# Playwright
+test-results
+playwright-report
+blob-report
+playwright/.cache/
