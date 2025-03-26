@@ -31,6 +31,7 @@
     "typecheck": "tsc"
   },
   "dependencies": {
+    "@chat-app/base-component-lib": "workspace:",
     "@rn-primitives/accordion": "catalog:",
     "@rn-primitives/alert-dialog": "catalog:",
     "@rn-primitives/aspect-ratio": "catalog:",
@@ -59,7 +60,6 @@
     "@rn-primitives/types": "catalog:",
     "@tanstack/react-table": "catalog:",
     "autoprefixer": "catalog:",
-    "@chat-app/base-component-lib": "workspace:",
     "class-variance-authority": "catalog:",
     "clsx": "catalog:",
     "expo-navigation-bar": "^4.0.8",
@@ -71,6 +71,7 @@
     "react-dom": "catalog:",
     "react-native": "catalog:",
     "react-native-reanimated": "catalog:",
+    "react-native-svg": "^15.11.2",
     "react-native-web": "catalog:",
     "tailwind-merge": "catalog:",
     "tailwindcss": "catalog:",
