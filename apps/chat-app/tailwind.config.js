@@ -5,9 +5,12 @@ module.exports = {
   darkMode: 'class',
   content: [
     './src/**/*.{ts,tsx}',
+    // TODO: should this be `src` or `dist`??
     '../../packages/features/src/**/*.{ts,tsx}',
+    '../../packages/features/dist/**/*.{ts,tsx}',
     // TODO: does adding this help/hurt/do nothing to the text color/theming issue?
     '../../packages/base-component-lib/src/**/*.{ts,tsx}',
+    '../../packages/base-component-lib/dist/**/*.{ts,tsx}',
   ],
   presets: [require('nativewind/preset')],
   theme: {

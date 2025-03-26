@@ -55,7 +55,7 @@
     "react-native": "catalog:",
     "react-native-reanimated": "catalog:",
     "react-native-web": "catalog:",
-    "react-native-svg": "^15.11.2",
+    "react-native-svg": "catalog:",
     "tailwind-merge": "catalog:",
     "tailwindcss": "catalog:",
     "tailwindcss-animate": "catalog:"

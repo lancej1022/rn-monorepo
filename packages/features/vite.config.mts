@@ -1,6 +1,5 @@
 import { defineConfig, transformWithEsbuild } from 'vite';
 import react from '@vitejs/plugin-react';
-import reactNativeWeb from 'vite-plugin-react-native-web';
 import path from 'path';
 import dtsPlugin from 'vite-plugin-dts';
 import noBundlePlugin from 'vite-plugin-no-bundle';
@@ -52,7 +51,6 @@ export default defineConfig({
       },
     },
     react(), // TODO: do I actually want this, or will it cause the compiled output to be borked?
-    reactNativeWeb(),
     dtsPlugin({
       compilerOptions: {
         tsBuildInfoFile: 'tsconfig.build.tsbuildinfo',
