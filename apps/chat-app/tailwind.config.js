@@ -3,7 +3,12 @@ const { hairlineWidth } = require('nativewind/theme');
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: 'class',
-  content: ['./src/**/*.{ts,tsx}', '../../packages/features/src/**/*.{ts,tsx}'],
+  content: [
+    './src/**/*.{ts,tsx}',
+    '../../packages/features/src/**/*.{ts,tsx}',
+    // TODO: does adding this help/hurt/do nothing to the text color/theming issue?
+    '../../packages/base-component-lib/src/**/*.{ts,tsx}',
+  ],
   presets: [require('nativewind/preset')],
   theme: {
     extend: {
