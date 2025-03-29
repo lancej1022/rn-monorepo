@@ -6,7 +6,7 @@ import noBundlePlugin from 'vite-plugin-no-bundle';
 
 import { readdirSync } from 'fs';
 import { join } from 'path';
-
+import tsconfigPaths from 'vite-tsconfig-paths';
 // TODO: would also need to map over the `lib` directory and add all the files in there too
 // const uiDir = join(__dirname, 'src/components/ui');
 // const uiFiles = readdirSync(uiDir, { recursive: true })
@@ -33,7 +33,7 @@ export default defineConfig({
 
   resolve: {
     alias: {
-      '~/': `${path.resolve(__dirname, 'src')}/`,
+      '~/': `${path.resolve(__dirname, './src')}/`,
     },
   },
   plugins: [
@@ -60,6 +60,7 @@ export default defineConfig({
       },
       include: ['src/**/*.ts', 'src/**/*.tsx'],
     }),
+    tsconfigPaths(),
     noBundlePlugin(),
   ],
   optimizeDeps: {

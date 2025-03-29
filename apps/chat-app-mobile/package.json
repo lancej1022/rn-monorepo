@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build:web": "one build",
+    "build": "one build",
     "clean": "one clean",
     "dev": "one dev",
     "dev:clean": "one dev --clean",
@@ -56,7 +56,7 @@
     "@chat-app/base-component-lib": "workspace:",
     "expo": "~52.0.17",
     "nativewind": "catalog:",
-    "one": "1.1.471",
+    "one": "1.1.475",
     "react": "catalog:",
     "react-native": "catalog:",
     "react-native-reanimated": "catalog:",

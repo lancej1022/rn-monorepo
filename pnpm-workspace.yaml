@@ -49,3 +49,4 @@ catalog:
   tailwindcss: 3.4.14
   tailwindcss-animate: 1.0.7
   tailwindcss-animate-utils: 1.0.7
+  vite-tsconfig-paths: 5.1.4

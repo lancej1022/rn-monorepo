@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react';
 import path from 'path';
 import dtsPlugin from 'vite-plugin-dts';
 import noBundlePlugin from 'vite-plugin-no-bundle';
-
+import tsconfigPaths from 'vite-tsconfig-paths';
 import { readdirSync } from 'fs';
 import { join } from 'path';
 
@@ -33,7 +33,7 @@ export default defineConfig({
 
   resolve: {
     alias: {
-      '~/': `${path.resolve(__dirname, 'src')}/`,
+      '~/': `${path.resolve(__dirname, './src')}/`,
     },
   },
   plugins: [
@@ -63,6 +63,7 @@ export default defineConfig({
       },
       include: ['src/**/*.ts', 'src/**/*.tsx'],
     }),
+    tsconfigPaths(),
     noBundlePlugin(),
   ],
   optimizeDeps: {

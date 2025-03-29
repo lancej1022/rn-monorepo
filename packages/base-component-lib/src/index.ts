@@ -34,3 +34,6 @@ export * from './lib/utils';
 export * from './lib/constants';
 export * from './lib/useColorScheme';
 export * from './lib/icons';
+
+// dev-defined exports
+export * from './components/ThemeToggle';

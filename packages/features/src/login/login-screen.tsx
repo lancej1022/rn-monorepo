@@ -1,13 +1,13 @@
 import { LoginForm } from './login-form';
 import { GalleryVerticalEnd } from 'lucide-react-native';
-import { Text } from 'base-component-lib';
+import { Text, ThemeToggle } from '@chat-app/base-component-lib';
 import { View, Image } from 'react-native';
 
 export function LoginScreen() {
   return (
     <View className='grid  min-h-svh lg:grid-cols-2'>
       <View className='flex flex-col gap-4 p-6 md:p-10'>
-        <View className='flex justify-center gap-2 md:justify-start'>
+        <View className='flex flex-row justify-center gap-2 md:justify-start'>
           <Text
             //  eslint-disable-next-line @typescript-eslint/ban-ts-comment
             //  @ts-ignore -- the `href` definitely works as expected when used in react-native-web, so im not sure why it errors here?
@@ -18,6 +18,7 @@ export function LoginScreen() {
               <GalleryVerticalEnd className='size-4' />
             </View>
             <Text>Acme Inc.</Text>
+            <ThemeToggle />
           </Text>
         </View>
         <View
