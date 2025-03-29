@@ -40,6 +40,7 @@ catalog:
   lucide-react-native: 0.454.0
   nativewind: 4.1.23
   postcss: 8.4.47
+  '@playwright/test': 1.51.1
   react-native: 0.76.1
   react-native-reanimated: 3.16.1
   react-native-svg: 15.11.2

@@ -10,6 +10,7 @@
     "dev:clean": "one dev --clean",
     "prebuild:native": "one prebuild",
     "serve": "one serve",
+    "test": "playwright test",
     "typecheck": "tsc"
   },
   "dependencies": {
@@ -67,6 +68,7 @@
   },
   "devDependencies": {
     "@react-native-community/cli": "15.1.3",
+    "@playwright/test": "catalog:",
     "autoprefixer": "catalog:",
     "postcss": "catalog:",
     "tailwindcss": "catalog:",
